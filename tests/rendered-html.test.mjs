@@ -74,6 +74,8 @@ test("keeps bilingual content and interaction contracts in source", async () => 
   assert.match(css, /@media \(max-width: 680px\)/);
   assert.match(css, /@media \(prefers-reduced-motion: reduce\)/);
   assert.match(css, /:focus-visible/);
+  assert.match(css, /\.hero-copy h1 span,[\s\S]*white-space: nowrap/);
+  assert.match(css, /html\[lang="en"\] \.hero-copy h1/);
   assert.doesNotMatch(layout, /codex-preview|Starter Project/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
 });
