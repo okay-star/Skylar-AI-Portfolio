@@ -165,6 +165,7 @@ export default function Home() {
         <section className="hero section-shell" id="top">
           <div className="hero-copy">
             <p className="eyebrow">{copy.hero.eyebrow}</p>
+            <p className="hero-positioning">{copy.hero.positioning}</p>
             <h1>
               <span>{copy.hero.headlineLead}</span>
               <strong>{copy.hero.headlineFocus}</strong>

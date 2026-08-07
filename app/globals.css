@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #f4f6f8;
+  --paper: #fbfbfd;
   --surface: #ffffff;
-  --ink: #18232d;
-  --muted: #5f6b76;
-  --line: #cbd3db;
-  --line-dark: #a7b1bb;
-  --blue: #2f55c8;
-  --blue-soft: #e3e9f8;
-  --warm: #c95d44;
-  --warm-soft: #f3e1dc;
-  --display: "Avenir Next", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
-  --body: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  --ink: #1d1d1f;
+  --muted: #6e6e73;
+  --line: #e2e2e7;
+  --line-dark: #d2d2d7;
+  --blue: #0066cc;
+  --blue-soft: #f2f6fc;
+  --warm: #b75b45;
+  --warm-soft: #faf2ef;
+  --display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", "PingFang SC", sans-serif;
+  --body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", "PingFang SC", "Noto Sans SC", sans-serif;
   --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
@@ -32,6 +32,7 @@ body {
   font-family: var(--body);
   font-size: 16px;
   line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
@@ -77,7 +78,7 @@ button {
 
 .section-shell,
 .header-inner {
-  width: min(1180px, calc(100% - 80px));
+  width: min(1200px, calc(100% - 80px));
   margin: 0 auto;
 }
 
@@ -85,13 +86,13 @@ button {
   position: sticky;
   top: 0;
   z-index: 30;
-  border-bottom: 1px solid rgba(167, 177, 187, 0.78);
-  background: rgba(244, 246, 248, 0.96);
-  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(210, 210, 215, 0.72);
+  background: rgba(251, 251, 253, 0.82);
+  backdrop-filter: saturate(180%) blur(20px);
 }
 
 .header-inner {
-  min-height: 76px;
+  min-height: 64px;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
@@ -107,9 +108,9 @@ button {
 
 .wordmark__name {
   font-family: var(--display);
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: -0.035em;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
 }
 
 .wordmark__role {
@@ -123,8 +124,9 @@ button {
 .desktop-nav {
   display: flex;
   align-items: center;
-  gap: 30px;
-  font-size: 14px;
+  gap: 28px;
+  color: #424245;
+  font-size: 12px;
 }
 
 .desktop-nav a {
@@ -264,19 +266,19 @@ a.contact-link:hover {
 .contact-rail__line {
   display: block;
   width: 36px;
-  height: 3px;
+  height: 2px;
   margin-top: 24px;
   background: var(--warm);
 }
 
 .hero {
-  min-height: calc(100vh - 76px);
-  padding-top: clamp(72px, 9vw, 122px);
-  padding-bottom: 46px;
+  min-height: calc(100vh - 64px);
+  padding-top: clamp(88px, 10vw, 144px);
+  padding-bottom: 58px;
   display: grid;
-  grid-template-columns: minmax(0, 1.34fr) minmax(260px, 0.66fr);
-  column-gap: clamp(48px, 8vw, 110px);
-  align-items: start;
+  grid-template-columns: minmax(0, 1.48fr) minmax(250px, 0.52fr);
+  column-gap: clamp(56px, 9vw, 126px);
+  align-items: center;
 }
 
 .hero-copy h1,
@@ -292,9 +294,13 @@ a.contact-link:hover {
 }
 
 .hero-copy h1 {
-  max-width: 790px;
-  margin-top: 25px;
-  font-size: clamp(48px, 6.4vw, 92px);
+  max-width: 860px;
+  margin-top: 22px;
+  color: var(--ink);
+  font-size: clamp(58px, 7.1vw, 104px);
+  font-weight: 600;
+  letter-spacing: -0.065em;
+  line-height: 1.01;
 }
 
 .hero-copy h1 span,
@@ -303,64 +309,87 @@ a.contact-link:hover {
 }
 
 .hero-copy h1 strong {
-  color: var(--blue);
+  color: inherit;
   font-weight: inherit;
+}
+
+.hero-positioning {
+  max-width: 760px;
+  margin: 14px 0 0;
+  color: var(--blue);
+  font-size: clamp(16px, 1.45vw, 19px);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.5;
 }
 
 .hero-intro {
   max-width: 690px;
-  margin: 32px 0 0;
-  color: #3f4b56;
-  font-size: clamp(17px, 1.6vw, 21px);
-  line-height: 1.85;
+  margin: 34px 0 0;
+  color: var(--muted);
+  font-size: clamp(17px, 1.45vw, 20px);
+  line-height: 1.75;
 }
 
 .hero-actions {
   display: flex;
   align-items: center;
-  gap: 28px;
-  margin-top: 36px;
+  gap: 14px;
+  margin-top: 38px;
 }
 
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  min-width: 186px;
-  gap: 24px;
-  padding: 13px 16px;
-  border: 1px solid var(--ink);
+  min-width: 176px;
+  gap: 22px;
+  padding: 12px 20px;
+  border: 1px solid var(--blue);
+  border-radius: 999px;
   font-size: 14px;
   font-weight: 600;
 }
 
 .button--primary {
-  background: var(--ink);
+  background: var(--blue);
   color: #fff;
   transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
 }
 
 .button--primary:hover {
-  border-color: var(--blue);
-  background: var(--blue);
+  border-color: #0077ed;
+  background: #0077ed;
   transform: translateY(-2px);
 }
 
 .text-link {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  border-bottom: 1px solid var(--line-dark);
+  justify-content: space-between;
+  min-width: 126px;
+  gap: 16px;
+  padding: 11px 18px;
+  border: 1px solid var(--line-dark);
+  border-radius: 999px;
+  color: var(--blue);
   font-size: 14px;
+  transition: border-color 180ms ease, background 180ms ease;
+}
+
+.text-link:hover {
+  border-color: #a8c7eb;
+  background: var(--blue-soft);
 }
 
 .working-note {
   max-width: 525px;
-  margin-top: 58px;
-  padding: 21px 24px 19px 25px;
+  margin-top: 64px;
+  padding: 21px 24px 20px;
+  border: 1px solid #eadbd6;
   border-left: 3px solid var(--warm);
-  background: var(--warm-soft);
-  transform: rotate(-0.65deg);
+  border-radius: 18px;
+  background: rgba(250, 242, 239, 0.72);
 }
 
 .working-note span {
@@ -375,13 +404,13 @@ a.contact-link:hover {
 .working-note p {
   margin: 7px 0 0;
   font-family: Georgia, "Songti SC", serif;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.65;
 }
 
 .portrait-block {
   align-self: center;
-  padding-top: 22px;
+  padding-top: 28px;
 }
 
 .portrait-frame {
@@ -392,17 +421,15 @@ a.contact-link:hover {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border: 1px solid var(--line-dark);
-  background: #e7ebef;
+  border: 1px solid #e8e8ed;
+  border-radius: 30px;
+  background: linear-gradient(145deg, #f5f5f7 0%, #e8edf4 100%);
+  box-shadow: 0 24px 70px rgba(29, 29, 31, 0.08);
 }
 
 .portrait-frame::before,
 .portrait-frame::after {
-  content: "";
-  position: absolute;
-  background: var(--line-dark);
-  opacity: 0.55;
-  transform: rotate(-51deg);
+  display: none;
 }
 
 .portrait-frame::before {
@@ -417,8 +444,8 @@ a.contact-link:hover {
 
 .portrait-frame__label {
   position: absolute;
-  top: 14px;
-  left: 14px;
+  top: 20px;
+  left: 22px;
   z-index: 1;
   font-family: var(--mono);
   font-size: 10px;
@@ -428,8 +455,9 @@ a.contact-link:hover {
 .portrait-initial {
   position: relative;
   z-index: 1;
-  color: rgba(24, 35, 45, 0.2);
-  font-family: Georgia, serif;
+  color: rgba(29, 29, 31, 0.13);
+  font-family: var(--display);
+  font-weight: 600;
   font-size: clamp(92px, 12vw, 148px);
   line-height: 1;
 }
@@ -445,36 +473,39 @@ a.contact-link:hover {
 }
 
 .portrait-note {
-  width: 85%;
-  margin: -8px 0 0 auto;
-  padding: 12px 14px;
-  background: var(--surface);
-  box-shadow: 0 8px 30px rgba(24, 35, 45, 0.08);
+  width: 88%;
+  margin: -14px auto 0;
+  padding: 13px 16px;
+  border: 1px solid rgba(226, 226, 231, 0.9);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 12px 34px rgba(29, 29, 31, 0.07);
   color: var(--muted);
   font-size: 12px;
   line-height: 1.5;
-  transform: rotate(2deg);
 }
 
 .principle-strip {
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin-top: 62px;
-  border-top: 1px solid var(--line-dark);
-  border-bottom: 1px solid var(--line-dark);
+  margin-top: 76px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .principle-strip > div {
   display: flex;
   align-items: baseline;
   gap: 14px;
-  padding: 17px 20px;
+  padding: 20px 24px;
   border-right: 1px solid var(--line);
 }
 
 .principle-strip > div:first-child {
-  padding-left: 0;
+  padding-left: 24px;
 }
 
 .principle-strip > div:last-child {
@@ -994,7 +1025,7 @@ a.contact-link:hover {
 
   .mobile-contact-bar {
     position: sticky;
-    top: 76px;
+    top: 64px;
     z-index: 25;
     min-height: 44px;
     display: flex;
@@ -1119,7 +1150,7 @@ a.contact-link:hover {
   }
 
   .site-header {
-    background: rgba(244, 246, 248, 0.98);
+    background: rgba(251, 251, 253, 0.92);
   }
 
   .header-inner {

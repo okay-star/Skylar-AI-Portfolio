@@ -25,6 +25,7 @@ export type ProfileCopy = {
   languageLabel: string;
   hero: {
     eyebrow: string;
+    positioning: string;
     headlineLead: string;
     headlineFocus: string;
     intro: string;
@@ -114,10 +115,11 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
     languageLabel: "切换为英文",
     hero: {
       eyebrow: "AI PRODUCT MANAGER · PERSONAL PORTFOLIO",
+      positioning: "AI 产品经理｜用 AI + Vibe Coding 快速创造产品",
       headlineLead: "把复杂的 AI 能力，",
       headlineFocus: "变成用户愿意使用的产品。",
       intro:
-        "我是 Skylar，一名关注 AI 产品落地的产品经理。我从真实问题出发，判断什么值得做、怎样验证，并把模糊想法推进成可用的产品。",
+        "我是 Skylar Li / 李香蓄，一名关注 AI 产品落地的产品经理。我从真实问题出发，判断什么值得做、怎样验证，并把模糊想法推进成可用的产品。",
       primaryAction: "查看我的项目",
       secondaryAction: "联系我",
       noteLabel: "我在意的不是",
@@ -280,6 +282,7 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
     languageLabel: "Switch to Chinese",
     hero: {
       eyebrow: "AI PRODUCT MANAGER · PERSONAL PORTFOLIO",
+      positioning: "AI Product Manager | Building products fast with AI + Vibe Coding",
       headlineLead: "Turning complex AI capabilities",
       headlineFocus: "into products people choose to use.",
       intro:
