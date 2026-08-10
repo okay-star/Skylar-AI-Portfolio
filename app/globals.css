@@ -558,7 +558,8 @@ html[lang="en"] .hero-copy h1 {
 }
 
 .education-record__number,
-.education-record__details span {
+.education-record__details span,
+.education-record__school span {
   font-family: var(--mono);
   font-size: 11px;
   letter-spacing: 0.06em;
@@ -568,13 +569,25 @@ html[lang="en"] .hero-copy h1 {
   color: var(--blue);
 }
 
-.education-record h3 {
+.education-record__school h3 {
   margin: 0;
   font-family: var(--display);
   font-size: clamp(23px, 2.5vw, 31px);
   font-weight: 600;
   letter-spacing: -0.03em;
   line-height: 1.25;
+}
+
+.education-record__school p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.education-record__school span {
+  margin-right: 8px;
+  color: var(--muted);
 }
 
 .education-record__details > div + div {
@@ -603,28 +616,6 @@ html[lang="en"] .hero-copy h1 {
   font-family: var(--mono);
   font-size: 10px;
   white-space: nowrap;
-}
-
-.education-note {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  margin: 34px 0 0;
-  padding: 18px 20px;
-  border-left: 3px solid var(--warm);
-  border-radius: 0 14px 14px 0;
-  background: var(--warm-soft);
-  color: #684a42;
-  font-size: 14px;
-  line-height: 1.7;
-}
-
-.education-note strong {
-  flex: 0 0 auto;
-  color: #a64f39;
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.08em;
 }
 
 .work-section {
@@ -1289,8 +1280,11 @@ html[lang="en"] .hero-copy h1 {
     padding: 27px 0 30px;
   }
 
-  .education-record h3 {
+  .education-record__school {
     grid-column: 2;
+  }
+
+  .education-record__school h3 {
     font-size: 23px;
   }
 
@@ -1303,12 +1297,6 @@ html[lang="en"] .hero-copy h1 {
     grid-column: 2;
     justify-self: start;
     margin-top: 5px;
-  }
-
-  .education-note {
-    gap: 10px;
-    align-items: flex-start;
-    flex-direction: column;
   }
 
   .case-list {

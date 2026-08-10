@@ -38,6 +38,8 @@ test("server-renders Skylar's Chinese portfolio shell", async () => {
   assert.match(html, /工作方式/);
   assert.match(html, /联系方式|联系我|LET'S TALK/);
   assert.match(html, /教育经历/);
+  assert.match(html, /澳大利亚莫那什大学/);
+  assert.match(html, /2021\.08-2023\.05/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
 });
 
@@ -58,6 +60,8 @@ test("keeps bilingual content and interaction contracts in source", async () => 
   assert.match(page, /contact-rail/);
   assert.match(page, /mobile-contact-bar/);
   assert.match(page, /education-section/);
+  assert.match(page, /education-record__school/);
+  assert.doesNotMatch(page, /education-note/);
   assert.doesNotMatch(page, /principle-strip/);
   assert.doesNotMatch(data, /principles:/);
   assert.doesNotMatch(data, /capabilities:\s*\{/);
@@ -65,8 +69,11 @@ test("keeps bilingual content and interaction contracts in source", async () => 
   assert.match(data, /zh:\s*\{/);
   assert.match(data, /en:\s*\{/);
   assert.match(data, /Building products fast with AI \+ Vibe Coding/);
-  assert.equal((data.match(/school: "学校名称待补充"/g) ?? []).length, 2);
-  assert.equal((data.match(/school: "School name to be added"/g) ?? []).length, 2);
+  assert.match(data, /school: "澳大利亚莫那什大学（QS：36）"/);
+  assert.match(data, /location: "澳大利亚，墨尔本"/);
+  assert.match(data, /honors: "荣获莫那什大学研究生奖学金"/);
+  assert.match(data, /school: "Monash University, Australia \(QS 36\)"/);
+  assert.match(data, /honors: "Outstanding Graduate\./);
   assert.equal((data.match(/eyebrow: "案例 0/g) ?? []).length, 3);
   assert.equal((data.match(/eyebrow: "CASE 0/g) ?? []).length, 3);
   assert.match(page, /Skylar Li \/ 李香蓄/);

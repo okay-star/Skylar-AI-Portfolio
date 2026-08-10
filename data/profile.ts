@@ -42,17 +42,19 @@ export type ProfileCopy = {
     title: string;
     intro: string;
     fieldLabels: {
+      location: string;
       degree: string;
       coursework: string;
+      honors: string;
     };
     records: Array<{
       school: string;
+      location: string;
       degree: string;
       coursework: string;
+      honors: string;
       time: string;
     }>;
-    noteLabel: string;
-    note: string;
   };
   work: {
     eyebrow: string;
@@ -143,25 +145,29 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
       title: "教育经历",
       intro: "后续可在这里补充学校、专业或学位、相关课程与学习时间。每段经历都保留成一条清晰的个人记录。",
       fieldLabels: {
+        location: "地点",
         degree: "学位 / 专业",
         coursework: "课程 / 学习重点",
+        honors: "奖励 / 荣誉",
       },
       records: [
         {
-          school: "学校名称待补充",
-          degree: "学位与专业待补充",
-          coursework: "课程内容、项目经历或学习重点待补充",
-          time: "时间待补充",
+          school: "澳大利亚莫那什大学（QS：36）",
+          location: "澳大利亚，墨尔本",
+          degree: "银行与金融学专业，硕士",
+          coursework: "统计与计量学、数据分析与应用、金融管理、编程 VBA、财务报表分析与企业价值评估等",
+          honors: "荣获莫那什大学研究生奖学金",
+          time: "2021.08-2023.05",
         },
         {
-          school: "学校名称待补充",
-          degree: "学位与专业待补充",
-          coursework: "课程内容、项目经历或学习重点待补充",
-          time: "时间待补充",
+          school: "澳大利亚莫那什大学（QS：36）",
+          location: "澳大利亚，墨尔本",
+          degree: "会计学专业；辅修经济学与商务战略，学士",
+          coursework: "审计学、金融会计学、税法、公司法、商务英语翻译、经济学、货币政策学等",
+          honors: "优秀毕业生，并获专业课程卓越减免（4门研究生课程）",
+          time: "2018.02-2021.07",
         },
       ],
-      noteLabel: "填写提示",
-      note: "建议每条只保留与目标岗位有关的信息。学校、专业、时间是基础；课程或项目用于补充你希望 HR 看到的学习方向。",
     },
     work: {
       eyebrow: "SELECTED WORK",
@@ -302,25 +308,29 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
       title: "Education",
       intro: "Add your school, degree or major, relevant coursework, and study dates here. Each entry stays as one clear personal record.",
       fieldLabels: {
+        location: "LOCATION",
         degree: "DEGREE / MAJOR",
         coursework: "COURSEWORK / FOCUS",
+        honors: "HONORS / AWARDS",
       },
       records: [
         {
-          school: "School name to be added",
-          degree: "Degree and major to be added",
-          coursework: "Relevant coursework, projects, or learning focus to be added",
-          time: "Dates to be added",
+          school: "Monash University, Australia (QS 36)",
+          location: "Melbourne, Australia",
+          degree: "Master of Banking and Finance",
+          coursework: "Statistics and econometrics, data analysis and applications, financial management, VBA programming, financial statement analysis, and business valuation.",
+          honors: "Monash University postgraduate scholarship.",
+          time: "2021.08-2023.05",
         },
         {
-          school: "School name to be added",
-          degree: "Degree and major to be added",
-          coursework: "Relevant coursework, projects, or learning focus to be added",
-          time: "Dates to be added",
+          school: "Monash University, Australia (QS 36)",
+          location: "Melbourne, Australia",
+          degree: "Bachelor of Accounting, with minors in Economics and Business Strategy",
+          coursework: "Auditing, financial accounting, tax law, corporate law, business English translation, economics, and monetary policy.",
+          honors: "Outstanding Graduate. Excellence-based exemptions for four postgraduate courses.",
+          time: "2018.02-2021.07",
         },
       ],
-      noteLabel: "FILLING NOTE",
-      note: "Keep each entry focused on what supports the role you want. School, major, and dates provide the basics. Coursework or projects can show the learning direction you want a hiring team to notice.",
     },
     work: {
       eyebrow: "SELECTED WORK",

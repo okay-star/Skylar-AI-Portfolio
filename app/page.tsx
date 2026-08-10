@@ -215,7 +215,13 @@ export default function Home() {
                 <span className="education-record__number" aria-hidden="true">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <h3>{record.school}</h3>
+                <div className="education-record__school">
+                  <h3>{record.school}</h3>
+                  <p>
+                    <span>{copy.education.fieldLabels.location}</span>
+                    {record.location}
+                  </p>
+                </div>
                 <div className="education-record__details">
                   <div>
                     <span>{copy.education.fieldLabels.degree}</span>
@@ -225,16 +231,15 @@ export default function Home() {
                     <span>{copy.education.fieldLabels.coursework}</span>
                     <p>{record.coursework}</p>
                   </div>
+                  <div>
+                    <span>{copy.education.fieldLabels.honors}</span>
+                    <p>{record.honors}</p>
+                  </div>
                 </div>
                 <span className="education-record__time">{record.time}</span>
               </article>
             ))}
           </div>
-
-          <p className="education-note">
-            <strong>{copy.education.noteLabel}</strong>
-            <span>{copy.education.note}</span>
-          </p>
         </section>
 
         <section className="section-shell section-block work-section" id="work" aria-labelledby="work-title">
