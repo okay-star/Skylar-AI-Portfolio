@@ -37,6 +37,7 @@ test("server-renders Skylar's Chinese portfolio shell", async () => {
   assert.match(html, /三个案例/);
   assert.match(html, /工作方式/);
   assert.match(html, /联系方式|联系我|LET'S TALK/);
+  assert.match(html, /教育经历/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
 });
 
@@ -56,12 +57,16 @@ test("keeps bilingual content and interaction contracts in source", async () => 
   assert.match(page, /aria-expanded=\{isExpanded\}/);
   assert.match(page, /contact-rail/);
   assert.match(page, /mobile-contact-bar/);
+  assert.match(page, /education-section/);
   assert.doesNotMatch(page, /principle-strip/);
   assert.doesNotMatch(data, /principles:/);
+  assert.doesNotMatch(data, /capabilities:\s*\{/);
 
   assert.match(data, /zh:\s*\{/);
   assert.match(data, /en:\s*\{/);
   assert.match(data, /Building products fast with AI \+ Vibe Coding/);
+  assert.equal((data.match(/school: "学校名称待补充"/g) ?? []).length, 2);
+  assert.equal((data.match(/school: "School name to be added"/g) ?? []).length, 2);
   assert.equal((data.match(/eyebrow: "案例 0/g) ?? []).length, 3);
   assert.equal((data.match(/eyebrow: "CASE 0/g) ?? []).length, 3);
   assert.match(page, /Skylar Li \/ 李香蓄/);

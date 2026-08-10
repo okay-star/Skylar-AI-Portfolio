@@ -37,11 +37,22 @@ export type ProfileCopy = {
     portraitTitle: string;
     portraitNote: string;
   };
-  capabilities: {
+  education: {
     eyebrow: string;
     title: string;
     intro: string;
-    items: Array<{ title: string; description: string }>;
+    fieldLabels: {
+      degree: string;
+      coursework: string;
+    };
+    records: Array<{
+      school: string;
+      degree: string;
+      coursework: string;
+      time: string;
+    }>;
+    noteLabel: string;
+    note: string;
   };
   work: {
     eyebrow: string;
@@ -127,33 +138,30 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
       portraitTitle: "职业照片待补充",
       portraitNote: "建议换成一张自然、有工作状态的照片",
     },
-    capabilities: {
-      eyebrow: "WHAT I BRING",
-      title: "我能带来的，不只是一份需求文档",
-      intro:
-        "AI 产品的不确定性更高。我的工作是把不确定性拆开，让团队知道先验证什么、为什么这样做，以及什么证据足以支持下一步。",
-      items: [
+    education: {
+      eyebrow: "EDUCATION",
+      title: "教育经历",
+      intro: "后续可在这里补充学校、专业或学位、相关课程与学习时间。每段经历都保留成一条清晰的个人记录。",
+      fieldLabels: {
+        degree: "学位 / 专业",
+        coursework: "课程 / 学习重点",
+      },
+      records: [
         {
-          title: "定义真正的问题",
-          description:
-            "区分用户说出的需求和背后的阻力，把宽泛机会收敛成值得解决的具体问题。",
+          school: "学校名称待补充",
+          degree: "学位与专业待补充",
+          coursework: "课程内容、项目经历或学习重点待补充",
+          time: "时间待补充",
         },
         {
-          title: "设计 AI 产品体验",
-          description:
-            "从人的任务和决策出发设计流程，同时处理模型能力、边界、反馈与信任。",
-        },
-        {
-          title: "推动跨团队落地",
-          description:
-            "让产品、设计和技术围绕同一目标协作，提前暴露分歧，减少无效返工。",
-        },
-        {
-          title: "用证据做取舍",
-          description:
-            "把假设变成可观察的行为和指标，接受结果不符合预期，再决定继续、调整或停止。",
+          school: "学校名称待补充",
+          degree: "学位与专业待补充",
+          coursework: "课程内容、项目经历或学习重点待补充",
+          time: "时间待补充",
         },
       ],
+      noteLabel: "填写提示",
+      note: "建议每条只保留与目标岗位有关的信息。学校、专业、时间是基础；课程或项目用于补充你希望 HR 看到的学习方向。",
     },
     work: {
       eyebrow: "SELECTED WORK",
@@ -289,33 +297,30 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
       portraitTitle: "Professional photo to be added",
       portraitNote: "Use a natural photo that shows you in a real working moment",
     },
-    capabilities: {
-      eyebrow: "WHAT I BRING",
-      title: "More than a requirements document",
-      intro:
-        "AI products carry more uncertainty. My job is to break that uncertainty down so a team knows what to test first, why it matters, and what evidence is strong enough to support the next move.",
-      items: [
+    education: {
+      eyebrow: "EDUCATION",
+      title: "Education",
+      intro: "Add your school, degree or major, relevant coursework, and study dates here. Each entry stays as one clear personal record.",
+      fieldLabels: {
+        degree: "DEGREE / MAJOR",
+        coursework: "COURSEWORK / FOCUS",
+      },
+      records: [
         {
-          title: "Define the real problem",
-          description:
-            "Separate a requested feature from the friction beneath it, then narrow a broad opportunity into a problem worth solving.",
+          school: "School name to be added",
+          degree: "Degree and major to be added",
+          coursework: "Relevant coursework, projects, or learning focus to be added",
+          time: "Dates to be added",
         },
         {
-          title: "Design AI product experiences",
-          description:
-            "Design around the person’s task and decisions while accounting for model limits, feedback, failure, and trust.",
-        },
-        {
-          title: "Move teams toward delivery",
-          description:
-            "Align product, design, and engineering around one outcome, expose disagreements early, and reduce avoidable rework.",
-        },
-        {
-          title: "Make trade-offs with evidence",
-          description:
-            "Turn assumptions into observable behavior and measures, accept surprising results, then continue, adjust, or stop.",
+          school: "School name to be added",
+          degree: "Degree and major to be added",
+          coursework: "Relevant coursework, projects, or learning focus to be added",
+          time: "Dates to be added",
         },
       ],
+      noteLabel: "FILLING NOTE",
+      note: "Keep each entry focused on what supports the role you want. School, major, and dates provide the basics. Coursework or projects can show the learning direction you want a hiring team to notice.",
     },
     work: {
       eyebrow: "SELECTED WORK",

@@ -200,24 +200,41 @@ export default function Home() {
 
         </section>
 
-        <section className="section-shell section-block capabilities" aria-labelledby="capabilities-title">
-          <div className="section-heading">
-            <p className="eyebrow">{copy.capabilities.eyebrow}</p>
-            <h2 id="capabilities-title">{copy.capabilities.title}</h2>
-            <p>{copy.capabilities.intro}</p>
+        <section className="section-shell section-block education-section" aria-labelledby="education-title">
+          <div className="education-heading">
+            <div>
+              <p className="eyebrow">{copy.education.eyebrow}</p>
+              <h2 id="education-title">{copy.education.title}</h2>
+            </div>
+            <p>{copy.education.intro}</p>
           </div>
 
-          <div className="capability-list">
-            {copy.capabilities.items.map((item, index) => (
-              <article className="capability-item" key={item.title}>
-                <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
-                <div>
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
+          <div className="education-records">
+            {copy.education.records.map((record, index) => (
+              <article className="education-record" key={`${record.school}-${index}`}>
+                <span className="education-record__number" aria-hidden="true">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <h3>{record.school}</h3>
+                <div className="education-record__details">
+                  <div>
+                    <span>{copy.education.fieldLabels.degree}</span>
+                    <p>{record.degree}</p>
+                  </div>
+                  <div>
+                    <span>{copy.education.fieldLabels.coursework}</span>
+                    <p>{record.coursework}</p>
+                  </div>
                 </div>
+                <span className="education-record__time">{record.time}</span>
               </article>
             ))}
           </div>
+
+          <p className="education-note">
+            <strong>{copy.education.noteLabel}</strong>
+            <span>{copy.education.note}</span>
+          </p>
         </section>
 
         <section className="section-shell section-block work-section" id="work" aria-labelledby="work-title">

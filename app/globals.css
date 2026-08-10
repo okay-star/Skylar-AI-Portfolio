@@ -516,44 +516,115 @@ html[lang="en"] .hero-copy h1 {
   line-height: 1.85;
 }
 
-.capabilities {
-  display: grid;
-  grid-template-columns: minmax(300px, 0.8fr) minmax(420px, 1.2fr);
-  gap: clamp(70px, 10vw, 140px);
+.education-section {
   border-top: 1px solid var(--line-dark);
 }
 
-.capability-list {
+.education-heading {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.86fr) minmax(320px, 1.14fr);
+  gap: clamp(48px, 9vw, 140px);
+  align-items: end;
+}
+
+.education-heading h2 {
+  margin: 18px 0 0;
+  font-family: var(--display);
+  font-size: clamp(38px, 5vw, 68px);
+  font-weight: 600;
+  letter-spacing: -0.055em;
+  line-height: 1.08;
+}
+
+.education-heading > p {
+  max-width: 500px;
+  margin: 0 0 5px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+.education-records {
+  margin-top: 68px;
   border-top: 1px solid var(--ink);
 }
 
-.capability-item {
+.education-record {
   display: grid;
-  grid-template-columns: 54px 1fr;
-  gap: 18px;
-  padding: 29px 0 31px;
+  grid-template-columns: 66px minmax(220px, 0.92fr) minmax(280px, 1.08fr) 170px;
+  gap: 26px;
+  padding: 32px 0 35px;
   border-bottom: 1px solid var(--line);
 }
 
-.capability-item > span {
-  color: var(--warm);
+.education-record__number,
+.education-record__details span {
   font-family: var(--mono);
   font-size: 11px;
+  letter-spacing: 0.06em;
 }
 
-.capability-item h3 {
+.education-record__number {
+  color: var(--blue);
+}
+
+.education-record h3 {
   margin: 0;
   font-family: var(--display);
-  font-size: 21px;
+  font-size: clamp(23px, 2.5vw, 31px);
   font-weight: 600;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
+  line-height: 1.25;
 }
 
-.capability-item p {
-  margin: 9px 0 0;
+.education-record__details > div + div {
+  margin-top: 21px;
+}
+
+.education-record__details span {
+  display: block;
   color: var(--muted);
+}
+
+.education-record__details p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.education-record__time {
+  align-self: start;
+  justify-self: end;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.education-note {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin: 34px 0 0;
+  padding: 18px 20px;
+  border-left: 3px solid var(--warm);
+  border-radius: 0 14px 14px 0;
+  background: var(--warm-soft);
+  color: #684a42;
   font-size: 14px;
-  line-height: 1.75;
+  line-height: 1.7;
+}
+
+.education-note strong {
+  flex: 0 0 auto;
+  color: #a64f39;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
 }
 
 .work-section {
@@ -1069,13 +1140,22 @@ html[lang="en"] .hero-copy h1 {
     margin-top: 56px;
   }
 
-  .capabilities,
+  .education-heading,
   .approach-section .section-shell {
     grid-template-columns: 1fr;
   }
 
-  .capability-list {
-    margin-top: 10px;
+  .education-heading {
+    gap: 20px;
+  }
+
+  .education-heading > p {
+    max-width: 700px;
+  }
+
+  .education-record {
+    grid-template-columns: 48px minmax(220px, 0.92fr) minmax(220px, 1.08fr) 140px;
+    gap: 18px;
   }
 
   .section-heading--split {
@@ -1192,19 +1272,43 @@ html[lang="en"] .hero-copy h1 {
   }
 
   .section-heading h2,
+  .education-heading h2,
   .approach-intro h2,
   .about-heading h2,
   .contact-section h2 {
     font-size: clamp(36px, 11vw, 50px);
   }
 
-  .capabilities {
-    gap: 56px;
+  .education-records {
+    margin-top: 48px;
   }
 
-  .capability-item {
-    grid-template-columns: 36px 1fr;
+  .education-record {
+    grid-template-columns: 34px 1fr;
+    gap: 10px 16px;
+    padding: 27px 0 30px;
+  }
+
+  .education-record h3 {
+    grid-column: 2;
+    font-size: 23px;
+  }
+
+  .education-record__details {
+    grid-column: 2;
+    margin-top: 12px;
+  }
+
+  .education-record__time {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: 5px;
+  }
+
+  .education-note {
     gap: 10px;
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .case-list {
