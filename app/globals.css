@@ -413,6 +413,16 @@ html[lang="en"] .hero-copy h1 {
   line-height: 1.65;
 }
 
+.working-note .working-note__context {
+  margin-top: 17px;
+  padding-top: 16px;
+  border-top: 1px solid #eadbd6;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
 .portrait-block {
   align-self: center;
   padding-top: 28px;

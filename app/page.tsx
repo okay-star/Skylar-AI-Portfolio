@@ -186,6 +186,7 @@ export default function Home() {
             <div className="working-note">
               <span>{copy.hero.noteLabel}</span>
               <p>{copy.hero.note}</p>
+              <p className="working-note__context">{copy.hero.noteContext}</p>
             </div>
           </div>
 

@@ -33,6 +33,7 @@ export type ProfileCopy = {
     secondaryAction: string;
     noteLabel: string;
     note: string;
+    noteContext: string;
     portraitLabel: string;
     portraitTitle: string;
     portraitNote: string;
@@ -136,6 +137,8 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
       secondaryAction: "联系我",
       noteLabel: "我在意的不是",
       note: "“这个功能能不能做”，而是“它是否真的让一个人的工作变得更好”。",
+      noteContext:
+        "我关注 AI 如何进入真实业务流程，帮助用户更快完成决策、表达与交付；我的产品判断来自长期的一线交易、用户运营和增长实践。",
       portraitLabel: "PORTRAIT",
       portraitTitle: "职业照片待补充",
       portraitNote: "建议换成一张自然、有工作状态的照片",
@@ -299,6 +302,8 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
       secondaryAction: "Contact me",
       noteLabel: "What I care about",
       note: "Not only whether a feature can be built, but whether it makes someone’s work meaningfully better.",
+      noteContext:
+        "I focus on how AI fits into real business workflows, helping users make decisions, communicate, and deliver work faster. My product judgment comes from years of hands-on work in trading, user operations, and growth.",
       portraitLabel: "PORTRAIT",
       portraitTitle: "Professional photo to be added",
       portraitNote: "Use a natural photo that shows you in a real working moment",
