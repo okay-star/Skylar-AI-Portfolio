@@ -490,43 +490,6 @@ html[lang="en"] .hero-copy h1 {
   line-height: 1.5;
 }
 
-.principle-strip {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: 76px;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.7);
-}
-
-.principle-strip > div {
-  display: flex;
-  align-items: baseline;
-  gap: 14px;
-  padding: 20px 24px;
-  border-right: 1px solid var(--line);
-}
-
-.principle-strip > div:first-child {
-  padding-left: 24px;
-}
-
-.principle-strip > div:last-child {
-  border-right: 0;
-}
-
-.principle-strip span {
-  color: var(--muted);
-  font-size: 11px;
-}
-
-.principle-strip strong {
-  font-size: 14px;
-  font-weight: 600;
-}
-
 .section-block {
   padding-top: clamp(110px, 12vw, 170px);
   padding-bottom: clamp(110px, 12vw, 170px);
@@ -1106,10 +1069,6 @@ html[lang="en"] .hero-copy h1 {
     margin-top: 56px;
   }
 
-  .principle-strip {
-    margin-top: 54px;
-  }
-
   .capabilities,
   .approach-section .section-shell {
     grid-template-columns: 1fr;
@@ -1225,21 +1184,6 @@ html[lang="en"] .hero-copy h1 {
   .portrait-block {
     width: min(82%, 330px);
     margin: 60px 0 0 auto;
-  }
-
-  .principle-strip {
-    grid-template-columns: 1fr;
-  }
-
-  .principle-strip > div,
-  .principle-strip > div:first-child {
-    padding: 13px 0;
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .principle-strip > div:last-child {
-    border-bottom: 0;
   }
 
   .section-block {

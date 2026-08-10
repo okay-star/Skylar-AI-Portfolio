@@ -56,6 +56,8 @@ test("keeps bilingual content and interaction contracts in source", async () => 
   assert.match(page, /aria-expanded=\{isExpanded\}/);
   assert.match(page, /contact-rail/);
   assert.match(page, /mobile-contact-bar/);
+  assert.doesNotMatch(page, /principle-strip/);
+  assert.doesNotMatch(data, /principles:/);
 
   assert.match(data, /zh:\s*\{/);
   assert.match(data, /en:\s*\{/);

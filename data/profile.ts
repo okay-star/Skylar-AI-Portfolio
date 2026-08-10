@@ -37,7 +37,6 @@ export type ProfileCopy = {
     portraitTitle: string;
     portraitNote: string;
   };
-  principles: Array<{ label: string; value: string }>;
   capabilities: {
     eyebrow: string;
     title: string;
@@ -128,11 +127,6 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
       portraitTitle: "职业照片待补充",
       portraitNote: "建议换成一张自然、有工作状态的照片",
     },
-    principles: [
-      { label: "起点", value: "真实问题" },
-      { label: "过程", value: "清楚判断" },
-      { label: "结果", value: "可验证改变" },
-    ],
     capabilities: {
       eyebrow: "WHAT I BRING",
       title: "我能带来的，不只是一份需求文档",
@@ -295,11 +289,6 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
       portraitTitle: "Professional photo to be added",
       portraitNote: "Use a natural photo that shows you in a real working moment",
     },
-    principles: [
-      { label: "Start", value: "A real problem" },
-      { label: "Process", value: "A clear judgment" },
-      { label: "Outcome", value: "A change we can verify" },
-    ],
     capabilities: {
       eyebrow: "WHAT I BRING",
       title: "More than a requirements document",

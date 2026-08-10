@@ -198,14 +198,6 @@ export default function Home() {
             <p className="portrait-note">{copy.hero.portraitNote}</p>
           </div>
 
-          <div className="principle-strip">
-            {copy.principles.map((principle) => (
-              <div key={principle.label}>
-                <span>{principle.label}</span>
-                <strong>{principle.value}</strong>
-              </div>
-            ))}
-          </div>
         </section>
 
         <section className="section-shell section-block capabilities" aria-labelledby="capabilities-title">
