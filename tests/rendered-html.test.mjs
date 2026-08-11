@@ -31,7 +31,7 @@ test("server-renders Skylar's Chinese portfolio shell", async () => {
   const html = await response.text();
   assert.match(html, /<title>Skylar Li \/ 李香蓄 · AI Product Manager<\/title>/i);
   assert.match(html, /把复杂的 AI 能力/);
-  assert.match(html, /AI 产品经理｜用 AI \+ Vibe Coding 全方位读懂产品/);
+  assert.match(html, /AI 产品经理｜用 AI \+ Vibe Coding 全方位提效产品/);
   assert.match(html, /查看我的项目/);
   assert.match(html, /联系我/);
   assert.match(html, /我关注 AI 如何进入真实业务流程/);
@@ -70,7 +70,9 @@ test("keeps bilingual content and interaction contracts in source", async () => 
 
   assert.match(data, /zh:\s*\{/);
   assert.match(data, /en:\s*\{/);
-  assert.match(data, /Understanding products from every angle with AI \+ Vibe Coding/);
+  assert.match(data, /Boosting product efficiency end to end with AI \+ Vibe Coding/);
+  assert.match(data, /product practitioner focused on making AI useful in real work/);
+  assert.doesNotMatch(data, /这里还会补充我的经历、行业背景和正在关注的方向/);
   assert.match(data, /I focus on how AI fits into real business workflows/);
   assert.doesNotMatch(data, /approach:\s*\{/);
   assert.match(data, /school: "澳大利亚莫那什大学（QS：36）"/);

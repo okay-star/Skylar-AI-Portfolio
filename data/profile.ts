@@ -133,11 +133,11 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
     languageLabel: "切换为英文",
     hero: {
       eyebrow: "AI PRODUCT MANAGER · PERSONAL PORTFOLIO",
-      positioning: "AI 产品经理｜用 AI + Vibe Coding 全方位读懂产品",
+      positioning: "AI 产品经理｜用 AI + Vibe Coding 全方位提效产品",
       headlineLead: "把复杂的 AI 能力，",
       headlineFocus: "变成用户愿意使用的产品。",
       intro:
-        "我是 Skylar Li / 李香蓄，一名关注 AI 产品落地的产品经理。我从真实问题出发，判断什么值得做、怎样验证，并把模糊想法推进成可用的产品。",
+        "我是 Skylar Li / 李香蓄，一名关注 AI 产品落地的产品人。我从真实问题出发，判断什么值得做、怎样验证，并把模糊想法推进成可用的产品。",
       primaryAction: "查看我的项目",
       secondaryAction: "联系我",
       noteContext:
@@ -266,9 +266,8 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
       paragraphs: [
         "我是一名关注 AI 产品落地的产品经理。相比追逐每一个新概念，我更关心技术进入真实工作之后，人是否理解、信任并愿意持续使用。",
         "我享受从混乱信息中找到关键问题，也重视讨论过程中的不同意见。好的产品判断很少来自一个人的灵感，更多来自团队对事实的共同理解。",
-        "这里还会补充我的经历、行业背景和正在关注的方向。",
       ],
-      asideLabel: "CURRENTLY",
+      asideLabel: "CONNECT",
       aside: "欢迎围绕 AI 产品、用户体验和合作机会交流。",
     },
     contact: {
@@ -289,11 +288,11 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
     languageLabel: "Switch to Chinese",
     hero: {
       eyebrow: "AI PRODUCT MANAGER · PERSONAL PORTFOLIO",
-      positioning: "AI Product Manager | Understanding products from every angle with AI + Vibe Coding",
+      positioning: "AI Product Manager | Boosting product efficiency end to end with AI + Vibe Coding",
       headlineLead: "Turning complex AI capabilities",
       headlineFocus: "into products people choose to use.",
       intro:
-        "I’m Skylar, a product manager focused on making AI useful in real work. I start with the problem, decide what is worth testing, and move ambiguous ideas toward products people can actually use.",
+        "I’m Skylar, a product practitioner focused on making AI useful in real work. I start with the problem, decide what is worth testing, and move ambiguous ideas toward products people can actually use.",
       primaryAction: "View my work",
       secondaryAction: "Contact me",
       noteContext:
@@ -422,9 +421,8 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
       paragraphs: [
         "I’m a product manager focused on making AI useful in real work. Rather than chasing every new concept, I care about what happens after technology enters a workflow: whether people understand it, trust it, and keep using it.",
         "I enjoy finding the central problem in messy information, and I value disagreement during the process. Strong product judgment rarely comes from one person’s inspiration. It grows from a team’s shared understanding of the facts.",
-        "My experience, industry background, and current interests will be added here.",
       ],
-      asideLabel: "CURRENTLY",
+      asideLabel: "CONNECT",
       aside: "Open to conversations about AI products, user experience, and collaboration.",
     },
     contact: {
