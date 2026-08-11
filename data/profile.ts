@@ -14,6 +14,13 @@ export type CaseStudy = {
   reflection: string;
 };
 
+export type CareerExperience = {
+  title: string;
+  time: string;
+  results: string[];
+  transfer: string;
+};
+
 export type ProfileCopy = {
   skip: string;
   nav: {
@@ -37,6 +44,14 @@ export type ProfileCopy = {
     portraitLabel: string;
     portraitTitle: string;
     portraitNote: string;
+  };
+  career: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    tags: string[];
+    transferLabel: string;
+    experiences: CareerExperience[];
   };
   education: {
     eyebrow: string;
@@ -142,6 +157,28 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
       portraitLabel: "PORTRAIT",
       portraitTitle: "职业照片待补充",
       portraitNote: "建议换成一张自然、有工作状态的照片",
+    },
+    career: {
+      eyebrow: "PRODUCT-RELEVANT EXPERIENCE",
+      title: "职业经历｜从产品实践到 AI 产品",
+      intro:
+        "具备 6 年+跨境电商运营、用户增长与商业化实践经验，关注大模型、AIGC 与智能化工作流在真实业务场景中的应用，并将相关经验运用到 AI 产品中。曾负责市场调研、用户需求洞察、活动策划、内容营销、社群运营、供应链与品牌合作及销售数据分析，形成了以用户任务为中心、以数据验证方案、以业务结果衡量价值的产品工作方式。",
+      tags: ["用户洞察与增长", "数据驱动迭代", "商业化与跨方协作"],
+      transferLabel: "产品能力迁移",
+      experiences: [
+        {
+          title: "跨境电商自主运营",
+          time: "2018.09–2025.07",
+          results: ["年销售额 50 万+", "建立 15+ 品牌合作", "运营 3 个 400+ 人社群", "社群订单转化率 60%+"],
+          transfer: "用户分层、增长漏斗、内容与社群运营、商业化转化、供应链协同。",
+        },
+        {
+          title: "京东到家｜营销推广实习生",
+          time: "2020.12–2021.04",
+          results: ["月均新注册用户 200+", "月均回购用户 100+", "基于销售数据迭代选品与活动"],
+          transfer: "用户拉新、活动路径设计、数据分析、增长实验与方案迭代。",
+        },
+      ],
     },
     education: {
       eyebrow: "EDUCATION",
@@ -307,6 +344,28 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
       portraitLabel: "PORTRAIT",
       portraitTitle: "Professional photo to be added",
       portraitNote: "Use a natural photo that shows you in a real working moment",
+    },
+    career: {
+      eyebrow: "PRODUCT-RELEVANT EXPERIENCE",
+      title: "Career Experience | From Product Practice to AI Products",
+      intro:
+        "With 6+ years of hands-on experience in cross-border ecommerce, user growth, and commercialization, I focus on applying large language models, AIGC, and intelligent workflows to real business scenarios. I bring these experiences into AI product work: starting from user tasks, validating with data, and measuring value through business outcomes.",
+      tags: ["User insight & growth", "Data-driven iteration", "Commercialization & collaboration"],
+      transferLabel: "Product transfer",
+      experiences: [
+        {
+          title: "Independent Cross-border Ecommerce Operator",
+          time: "2018.09–2025.07",
+          results: ["RMB 500K+ annual sales", "15+ brand partnerships", "Three 400+ member communities", "60%+ community order conversion"],
+          transfer: "User segmentation, growth funnels, content and community operations, conversion, and supply coordination.",
+        },
+        {
+          title: "JD Daojia | Marketing Promotion Intern",
+          time: "2020.12–2021.04",
+          results: ["200+ new registered users per month", "100+ monthly repeat customers", "Data-led product selection and campaign iteration"],
+          transfer: "User acquisition, activity-flow design, data analysis, growth experiments, and iteration.",
+        },
+      ],
     },
     education: {
       eyebrow: "EDUCATION",

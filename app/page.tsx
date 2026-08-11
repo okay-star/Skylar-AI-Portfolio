@@ -201,48 +201,6 @@ export default function Home() {
 
         </section>
 
-        <section className="section-shell section-block education-section" aria-labelledby="education-title">
-          <div className="education-heading">
-            <div>
-              <p className="eyebrow">{copy.education.eyebrow}</p>
-              <h2 id="education-title">{copy.education.title}</h2>
-            </div>
-            <p>{copy.education.intro}</p>
-          </div>
-
-          <div className="education-records">
-            {copy.education.records.map((record, index) => (
-              <article className="education-record" key={`${record.school}-${index}`}>
-                <span className="education-record__number" aria-hidden="true">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <div className="education-record__school">
-                  <h3>{record.school}</h3>
-                  <p>
-                    <span>{copy.education.fieldLabels.location}</span>
-                    {record.location}
-                  </p>
-                </div>
-                <div className="education-record__details">
-                  <div>
-                    <span>{copy.education.fieldLabels.degree}</span>
-                    <p>{record.degree}</p>
-                  </div>
-                  <div>
-                    <span>{copy.education.fieldLabels.coursework}</span>
-                    <p>{record.coursework}</p>
-                  </div>
-                  <div>
-                    <span>{copy.education.fieldLabels.honors}</span>
-                    <p>{record.honors}</p>
-                  </div>
-                </div>
-                <span className="education-record__time">{record.time}</span>
-              </article>
-            ))}
-          </div>
-        </section>
-
         <section className="section-shell section-block work-section" id="work" aria-labelledby="work-title">
           <div className="section-heading section-heading--split">
             <div>
@@ -287,6 +245,85 @@ export default function Home() {
                 </article>
               );
             })}
+          </div>
+        </section>
+
+        <section className="section-shell section-block career-section" aria-labelledby="career-title">
+          <div className="career-heading">
+            <p className="eyebrow">{copy.career.eyebrow}</p>
+            <h2 id="career-title">{copy.career.title}</h2>
+            <p>{copy.career.intro}</p>
+          </div>
+
+          <ul className="career-tags" aria-label={locale === "zh" ? "产品能力标签" : "Product capability tags"}>
+            {copy.career.tags.map((tag) => (
+              <li key={tag}>{tag}</li>
+            ))}
+          </ul>
+
+          <ol className="career-timeline">
+            {copy.career.experiences.map((experience) => (
+              <li className="career-entry" key={`${experience.title}-${experience.time}`}>
+                <span className="career-entry__marker" aria-hidden="true" />
+                <article>
+                  <div className="career-entry__heading">
+                    <h3>{experience.title}</h3>
+                    <time>{experience.time}</time>
+                  </div>
+                  <ul className="career-entry__results">
+                    {experience.results.map((result) => (
+                      <li key={result}>{result}</li>
+                    ))}
+                  </ul>
+                  <p className="career-entry__transfer">
+                    <span>{copy.career.transferLabel}</span>
+                    {experience.transfer}
+                  </p>
+                </article>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <section className="section-shell section-block education-section" aria-labelledby="education-title">
+          <div className="education-heading">
+            <div>
+              <p className="eyebrow">{copy.education.eyebrow}</p>
+              <h2 id="education-title">{copy.education.title}</h2>
+            </div>
+            <p>{copy.education.intro}</p>
+          </div>
+
+          <div className="education-records">
+            {copy.education.records.map((record, index) => (
+              <article className="education-record" key={`${record.school}-${index}`}>
+                <span className="education-record__number" aria-hidden="true">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <div className="education-record__school">
+                  <h3>{record.school}</h3>
+                  <p>
+                    <span>{copy.education.fieldLabels.location}</span>
+                    {record.location}
+                  </p>
+                </div>
+                <div className="education-record__details">
+                  <div>
+                    <span>{copy.education.fieldLabels.degree}</span>
+                    <p>{record.degree}</p>
+                  </div>
+                  <div>
+                    <span>{copy.education.fieldLabels.coursework}</span>
+                    <p>{record.coursework}</p>
+                  </div>
+                  <div>
+                    <span>{copy.education.fieldLabels.honors}</span>
+                    <p>{record.honors}</p>
+                  </div>
+                </div>
+                <span className="education-record__time">{record.time}</span>
+              </article>
+            ))}
           </div>
         </section>
 
