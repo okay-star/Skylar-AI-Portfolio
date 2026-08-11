@@ -31,12 +31,12 @@ test("server-renders Skylar's Chinese portfolio shell", async () => {
   const html = await response.text();
   assert.match(html, /<title>Skylar Li \/ 李香蓄 · AI Product Manager<\/title>/i);
   assert.match(html, /把复杂的 AI 能力/);
-  assert.match(html, /AI 产品经理｜用 AI \+ Vibe Coding 快速创造产品/);
+  assert.match(html, /AI 产品经理｜用 AI \+ Vibe Coding 全方位读懂产品/);
   assert.match(html, /查看我的项目/);
   assert.match(html, /联系我/);
   assert.match(html, /我关注 AI 如何进入真实业务流程/);
   assert.match(html, /三个案例/);
-  assert.match(html, /工作方式/);
+  assert.doesNotMatch(html, /先把问题说清楚，再开始做方案/);
   assert.match(html, /联系方式|联系我|LET'S TALK/);
   assert.match(html, /教育经历/);
   assert.match(html, /澳大利亚莫那什大学/);
@@ -63,14 +63,16 @@ test("keeps bilingual content and interaction contracts in source", async () => 
   assert.match(page, /education-section/);
   assert.match(page, /education-record__school/);
   assert.doesNotMatch(page, /education-note/);
+  assert.doesNotMatch(page, /approach-section/);
   assert.doesNotMatch(page, /principle-strip/);
   assert.doesNotMatch(data, /principles:/);
   assert.doesNotMatch(data, /capabilities:\s*\{/);
 
   assert.match(data, /zh:\s*\{/);
   assert.match(data, /en:\s*\{/);
-  assert.match(data, /Building products fast with AI \+ Vibe Coding/);
+  assert.match(data, /Understanding products from every angle with AI \+ Vibe Coding/);
   assert.match(data, /I focus on how AI fits into real business workflows/);
+  assert.doesNotMatch(data, /approach:\s*\{/);
   assert.match(data, /school: "澳大利亚莫那什大学（QS：36）"/);
   assert.match(data, /location: "澳大利亚，墨尔本"/);
   assert.match(data, /honors: "荣获莫那什大学研究生奖学金"/);

@@ -136,7 +136,6 @@ export default function Home() {
 
           <nav className="desktop-nav" aria-label={locale === "zh" ? "主要导航" : "Primary navigation"}>
             <a href="#work">{copy.nav.work}</a>
-            <a href="#approach">{copy.nav.approach}</a>
             <a href="#about">{copy.nav.about}</a>
             <a href="#contact">{copy.nav.contact}</a>
           </nav>
@@ -184,8 +183,6 @@ export default function Home() {
             </div>
 
             <div className="working-note">
-              <span>{copy.hero.noteLabel}</span>
-              <p>{copy.hero.note}</p>
               <p className="working-note__context">{copy.hero.noteContext}</p>
             </div>
           </div>
@@ -291,7 +288,6 @@ export default function Home() {
               <p className="eyebrow">{copy.education.eyebrow}</p>
               <h2 id="education-title">{copy.education.title}</h2>
             </div>
-            <p>{copy.education.intro}</p>
           </div>
 
           <div className="education-records">
@@ -324,26 +320,6 @@ export default function Home() {
                 <span className="education-record__time">{record.time}</span>
               </article>
             ))}
-          </div>
-        </section>
-
-        <section className="approach-section" id="approach" aria-labelledby="approach-title">
-          <div className="section-shell">
-            <div className="approach-intro">
-              <p className="eyebrow">{copy.approach.eyebrow}</p>
-              <h2 id="approach-title">{copy.approach.title}</h2>
-              <p>{copy.approach.intro}</p>
-            </div>
-
-            <ol className="approach-steps">
-              {copy.approach.steps.map((item) => (
-                <li key={item.step}>
-                  <span>{item.step}</span>
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                </li>
-              ))}
-            </ol>
           </div>
         </section>
 

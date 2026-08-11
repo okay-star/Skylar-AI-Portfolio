@@ -25,7 +25,6 @@ export type ProfileCopy = {
   skip: string;
   nav: {
     work: string;
-    approach: string;
     about: string;
     contact: string;
   };
@@ -38,8 +37,6 @@ export type ProfileCopy = {
     intro: string;
     primaryAction: string;
     secondaryAction: string;
-    noteLabel: string;
-    note: string;
     noteContext: string;
     portraitLabel: string;
     portraitTitle: string;
@@ -91,12 +88,6 @@ export type ProfileCopy = {
     };
     cases: CaseStudy[];
   };
-  approach: {
-    eyebrow: string;
-    title: string;
-    intro: string;
-    steps: Array<{ step: string; title: string; description: string }>;
-  };
   about: {
     eyebrow: string;
     title: string;
@@ -136,22 +127,19 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
     skip: "跳到主要内容",
     nav: {
       work: "项目案例",
-      approach: "工作方式",
       about: "关于我",
       contact: "联系",
     },
     languageLabel: "切换为英文",
     hero: {
       eyebrow: "AI PRODUCT MANAGER · PERSONAL PORTFOLIO",
-      positioning: "AI 产品经理｜用 AI + Vibe Coding 快速创造产品",
+      positioning: "AI 产品经理｜用 AI + Vibe Coding 全方位读懂产品",
       headlineLead: "把复杂的 AI 能力，",
       headlineFocus: "变成用户愿意使用的产品。",
       intro:
         "我是 Skylar Li / 李香蓄，一名关注 AI 产品落地的产品经理。我从真实问题出发，判断什么值得做、怎样验证，并把模糊想法推进成可用的产品。",
       primaryAction: "查看我的项目",
       secondaryAction: "联系我",
-      noteLabel: "我在意的不是",
-      note: "“这个功能能不能做”，而是“它是否真的让一个人的工作变得更好”。",
       noteContext:
         "我关注 AI 如何进入真实业务流程，帮助用户更快完成决策、表达与交付；我的产品判断来自长期的一线交易、用户运营和增长实践。",
       portraitLabel: "PORTRAIT",
@@ -183,7 +171,7 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
     education: {
       eyebrow: "EDUCATION",
       title: "教育经历",
-      intro: "后续可在这里补充学校、专业或学位、相关课程与学习时间。每段经历都保留成一条清晰的个人记录。",
+      intro: "",
       fieldLabels: {
         location: "地点",
         degree: "学位 / 专业",
@@ -272,34 +260,6 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
         },
       ],
     },
-    approach: {
-      eyebrow: "HOW I WORK",
-      title: "先把问题说清楚，再开始做方案",
-      intro:
-        "这是我处理产品不确定性的基本顺序。它不是固定流程，而是一套帮助团队减少误判的工作习惯。",
-      steps: [
-        {
-          step: "01",
-          title: "听见真实处境",
-          description: "理解一个人现在怎样完成任务，哪里犹豫、返工或放弃。",
-        },
-        {
-          step: "02",
-          title: "写下关键判断",
-          description: "把目标、假设、风险和暂时不做的事情放在同一张纸上。",
-        },
-        {
-          step: "03",
-          title: "用最小方案学习",
-          description: "先做足以验证高风险假设的版本，而不是一次性交付所有想法。",
-        },
-        {
-          step: "04",
-          title: "让证据决定下一步",
-          description: "同时看行为、反馈和业务结果，愿意修正原来的判断。",
-        },
-      ],
-    },
     about: {
       eyebrow: "ABOUT SKYLAR",
       title: "我喜欢把复杂事情讲明白，也喜欢和人一起把事情做成",
@@ -309,7 +269,7 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
         "这里还会补充我的经历、行业背景和正在关注的方向。",
       ],
       asideLabel: "CURRENTLY",
-      aside: "正在补充真实项目与职业经历，也欢迎围绕 AI 产品、用户体验和合作机会交流。",
+      aside: "欢迎围绕 AI 产品、用户体验和合作机会交流。",
     },
     contact: {
       eyebrow: "LET'S TALK",
@@ -317,28 +277,25 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
       availability: "开放交流：AI 产品岗位 · 项目合作 · 同行讨论",
       missing: "待补充",
     },
-    footer: "个人主页首版 · 真实内容持续补充中",
+    footer: "个人主页",
   },
   en: {
     skip: "Skip to main content",
     nav: {
       work: "Work",
-      approach: "Approach",
       about: "About",
       contact: "Contact",
     },
     languageLabel: "Switch to Chinese",
     hero: {
       eyebrow: "AI PRODUCT MANAGER · PERSONAL PORTFOLIO",
-      positioning: "AI Product Manager | Building products fast with AI + Vibe Coding",
+      positioning: "AI Product Manager | Understanding products from every angle with AI + Vibe Coding",
       headlineLead: "Turning complex AI capabilities",
       headlineFocus: "into products people choose to use.",
       intro:
         "I’m Skylar, a product manager focused on making AI useful in real work. I start with the problem, decide what is worth testing, and move ambiguous ideas toward products people can actually use.",
       primaryAction: "View my work",
       secondaryAction: "Contact me",
-      noteLabel: "What I care about",
-      note: "Not only whether a feature can be built, but whether it makes someone’s work meaningfully better.",
       noteContext:
         "I focus on how AI fits into real business workflows, helping users make decisions, communicate, and deliver work faster. My product judgment comes from years of hands-on work in trading, user operations, and growth.",
       portraitLabel: "PORTRAIT",
@@ -370,7 +327,7 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
     education: {
       eyebrow: "EDUCATION",
       title: "Education",
-      intro: "Add your school, degree or major, relevant coursework, and study dates here. Each entry stays as one clear personal record.",
+      intro: "",
       fieldLabels: {
         location: "LOCATION",
         degree: "DEGREE / MAJOR",
@@ -459,34 +416,6 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
         },
       ],
     },
-    approach: {
-      eyebrow: "HOW I WORK",
-      title: "Make the problem clear before making the solution",
-      intro:
-        "This is the order I use to manage product uncertainty. It is not a rigid process, but a set of habits that helps a team reduce avoidable mistakes.",
-      steps: [
-        {
-          step: "01",
-          title: "Hear the real situation",
-          description: "Understand how someone works today, where they hesitate, repeat work, or give up.",
-        },
-        {
-          step: "02",
-          title: "Write down the judgment",
-          description: "Put the goal, assumptions, risks, and deliberate non-goals on the same page.",
-        },
-        {
-          step: "03",
-          title: "Learn with the smallest useful version",
-          description: "Build enough to test the riskiest assumption before building every idea.",
-        },
-        {
-          step: "04",
-          title: "Let evidence shape the next move",
-          description: "Read behavior, feedback, and business outcomes together, then revise the judgment.",
-        },
-      ],
-    },
     about: {
       eyebrow: "ABOUT SKYLAR",
       title: "I like making complex things clear, and making progress with people",
@@ -496,7 +425,7 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
         "My experience, industry background, and current interests will be added here.",
       ],
       asideLabel: "CURRENTLY",
-      aside: "Adding real project and career details, while staying open to conversations about AI products, user experience, and collaboration.",
+      aside: "Open to conversations about AI products, user experience, and collaboration.",
     },
     contact: {
       eyebrow: "LET'S TALK",
@@ -504,6 +433,6 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
       availability: "Open to: AI product roles · Project collaboration · Peer conversations",
       missing: "To be added",
     },
-    footer: "Personal portfolio, first edition · Real work in progress",
+    footer: "Personal portfolio",
   },
 };
