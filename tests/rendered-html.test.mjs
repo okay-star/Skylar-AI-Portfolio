@@ -76,6 +76,7 @@ test("keeps bilingual content and interaction contracts in source", async () => 
   assert.match(data, /product practitioner focused on making AI useful in real work/);
   assert.match(data, /Zestful & Grateful/);
   assert.match(data, /I believe every encounter has meaning/);
+  assert.match(data, /even those without a destination/);
   assert.doesNotMatch(data, /这里还会补充我的经历、行业背景和正在关注的方向/);
   assert.match(data, /I focus on how AI fits into real business workflows/);
   assert.doesNotMatch(data, /approach:\s*\{/);
