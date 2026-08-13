@@ -43,6 +43,7 @@ test("server-renders Skylar's Chinese portfolio shell", async () => {
   assert.match(html, /教育经历/);
   assert.match(html, /澳大利亚莫那什大学/);
   assert.match(html, /2021\.08-2023\.05/);
+  assert.match(html, /年销售额 80 万\+/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|react-loading-skeleton/i);
 });
 
@@ -79,6 +80,7 @@ test("keeps bilingual content and interaction contracts in source", async () => 
   assert.match(data, /even those without a destination/);
   assert.doesNotMatch(data, /这里还会补充我的经历、行业背景和正在关注的方向/);
   assert.match(data, /I focus on how AI fits into real business workflows/);
+  assert.match(data, /RMB 800K\+ annual sales/);
   assert.doesNotMatch(data, /approach:\s*\{/);
   assert.match(data, /school: "澳大利亚莫那什大学（QS：36）"/);
   assert.match(data, /location: "澳大利亚，墨尔本"/);

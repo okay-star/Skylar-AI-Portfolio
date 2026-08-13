@@ -157,7 +157,7 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
         {
           title: "跨境电商自主运营",
           time: "2018.09–2025.07",
-          results: ["年销售额 50 万+", "建立 15+ 品牌合作", "运营 3 个 400+ 人社群", "社群订单转化率 60%+"],
+          results: ["年销售额 80 万+", "建立 15+ 品牌合作", "运营 3 个 400+ 人社群", "社群订单转化率 60%+"],
           transfer: "用户分层、增长漏斗、内容与社群运营、商业化转化、供应链协同。",
         },
         {
@@ -313,7 +313,7 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
         {
           title: "Independent Cross-border Ecommerce Operator",
           time: "2018.09–2025.07",
-          results: ["RMB 500K+ annual sales", "15+ brand partnerships", "Three 400+ member communities", "60%+ community order conversion"],
+          results: ["RMB 800K+ annual sales", "15+ brand partnerships", "Three 400+ member communities", "60%+ community order conversion"],
           transfer: "User segmentation, growth funnels, content and community operations, conversion, and supply coordination.",
         },
         {
