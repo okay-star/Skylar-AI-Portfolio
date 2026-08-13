@@ -264,11 +264,12 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
       eyebrow: "ABOUT SKYLAR",
       title: "我喜欢把复杂事情讲明白，也喜欢和人一起把事情做成",
       paragraphs: [
-        "我是一名关注 AI 产品落地的产品经理。相比追逐每一个新概念，我更关心技术进入真实工作之后，人是否理解、信任并愿意持续使用。",
+        "我是一名关注 AI 产品落地的产品人。相比追逐每一个新概念，我更关心技术进入真实工作之后，人是否理解、信任并愿意持续使用。",
         "我享受从混乱信息中找到关键问题，也重视讨论过程中的不同意见。好的产品判断很少来自一个人的灵感，更多来自团队对事实的共同理解。",
       ],
-      asideLabel: "CONNECT",
-      aside: "欢迎围绕 AI 产品、用户体验和合作机会交流。",
+      asideLabel: "Zestful & Grateful",
+      aside:
+        "热爱工作，同时热爱生活，喜欢运动，喜欢音乐，喜欢小动物，喜欢一切美好的事物。我一直坚信，相遇不一定有结局，但一定有意义。",
     },
     contact: {
       eyebrow: "LET'S TALK",
@@ -419,11 +420,12 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
       eyebrow: "ABOUT SKYLAR",
       title: "I like making complex things clear, and making progress with people",
       paragraphs: [
-        "I’m a product manager focused on making AI useful in real work. Rather than chasing every new concept, I care about what happens after technology enters a workflow: whether people understand it, trust it, and keep using it.",
+        "I’m a product practitioner focused on making AI useful in real work. Rather than chasing every new concept, I care about what happens after technology enters a workflow: whether people understand it, trust it, and keep using it.",
         "I enjoy finding the central problem in messy information, and I value disagreement during the process. Strong product judgment rarely comes from one person’s inspiration. It grows from a team’s shared understanding of the facts.",
       ],
-      asideLabel: "CONNECT",
-      aside: "Open to conversations about AI products, user experience, and collaboration.",
+      asideLabel: "Zestful & Grateful",
+      aside:
+        "I care deeply about my work and about life beyond it. I enjoy exercise, music, animals, and all the things that make life feel good. I believe every encounter has meaning, even when it does not lead to an ending.",
     },
     contact: {
       eyebrow: "LET'S TALK",
