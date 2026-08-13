@@ -95,8 +95,7 @@ test("keeps bilingual content and interaction contracts in source", async () => 
   assert.match(data, /value: "lixiangxu0309@qq\.com"/);
   assert.match(data, /href: "mailto:lixiangxu0309@qq\.com"/);
   assert.match(data, /id: "social", label: "Social", value: "Skyllok", href: null/);
-  assert.match(data, /id: "linkedin", label: "LinkedIn", value: null, href: null/);
-  assert.ok(data.indexOf('id: "social"') < data.indexOf('id: "linkedin"'));
+  assert.doesNotMatch(data, /LinkedIn|linkedin/);
   assert.match(data, /待 Skylar 补充真实项目/);
   assert.match(data, /Real project details to be added by Skylar/);
 

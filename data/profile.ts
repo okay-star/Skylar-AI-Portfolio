@@ -119,7 +119,6 @@ export const contacts: ContactItem[] = [
     href: "mailto:lixiangxu0309@qq.com",
   },
   { id: "social", label: "Social", value: "Skyllok", href: null },
-  { id: "linkedin", label: "LinkedIn", value: null, href: null },
 ];
 
 export const profileCopy: Record<Locale, ProfileCopy> = {
