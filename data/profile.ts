@@ -425,7 +425,7 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
       ],
       asideLabel: "Zestful & Grateful",
       aside:
-        "I care deeply about my work and about life beyond it. I enjoy exercise, music, animals, and all the things that make life feel good. I believe every encounter has meaning, even when it does not lead to an ending.",
+        "I care deeply about my work and about life beyond it. I enjoy sports, music, animals, and all the things that make life feel good. I believe every encounter has meaning, even when it does not lead to an ending.",
     },
     contact: {
       eyebrow: "LET'S TALK",
