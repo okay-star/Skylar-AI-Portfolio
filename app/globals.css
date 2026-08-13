@@ -599,6 +599,7 @@ html[lang="en"] .hero-copy h1 {
 .education-record__time {
   align-self: start;
   justify-self: end;
+  margin-right: 132px;
   padding: 8px 10px;
   border: 1px solid var(--line);
   border-radius: 999px;
@@ -707,6 +708,7 @@ html[lang="en"] .hero-copy h1 {
 
 .career-entry time {
   flex: 0 0 auto;
+  margin-right: 132px;
   color: var(--muted);
   font-family: var(--mono);
   font-size: 11px;
@@ -1118,6 +1120,11 @@ html[lang="en"] .hero-copy h1 {
 
   .contact-rail {
     display: none;
+  }
+
+  .education-record__time,
+  .career-entry time {
+    margin-right: 0;
   }
 
   .mobile-contact-bar {

@@ -108,6 +108,8 @@ test("keeps bilingual content and interaction contracts in source", async () => 
   assert.match(css, /\.contact-rail[\s\S]*width: 108px/);
   assert.match(css, /\.contact-rail[\s\S]*background: rgba\(251, 251, 253, 0\.68\)/);
   assert.match(css, /\.section-shell,[\s\S]*width: min\(1100px, calc\(100% - 80px\)\)/);
+  assert.match(css, /\.education-record__time[\s\S]*margin-right: 132px/);
+  assert.match(css, /\.career-entry time[\s\S]*margin-right: 132px/);
   assert.doesNotMatch(layout, /codex-preview|Starter Project/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
 });
