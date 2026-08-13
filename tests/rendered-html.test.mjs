@@ -38,6 +38,7 @@ test("server-renders Skylar's Chinese portfolio shell", async () => {
   assert.match(html, /我是一名关注 AI 产品落地的产品人/);
   assert.match(html, /Zestful &amp; Grateful/);
   assert.match(html, /三个案例/);
+  assert.match(html, /SELECTED PROJECTS/);
   assert.doesNotMatch(html, /先把问题说清楚，再开始做方案/);
   assert.match(html, /联系方式|联系我|LET'S TALK/);
   assert.match(html, /教育经历/);
@@ -74,6 +75,7 @@ test("keeps bilingual content and interaction contracts in source", async () => 
   assert.match(data, /zh:\s*\{/);
   assert.match(data, /en:\s*\{/);
   assert.match(data, /Boosting product efficiency end to end with AI \+ Vibe Coding/);
+  assert.equal((data.match(/eyebrow: "SELECTED PROJECTS"/g) ?? []).length, 2);
   assert.match(data, /product practitioner focused on making AI useful in real work/);
   assert.match(data, /Zestful & Grateful/);
   assert.match(data, /I believe every encounter has meaning/);

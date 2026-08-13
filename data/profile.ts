@@ -198,7 +198,7 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
       ],
     },
     work: {
-      eyebrow: "SELECTED WORK",
+      eyebrow: "SELECTED PROJECTS",
       title: "三个案例，展示我是怎样做产品的",
       intro:
         "这里不会只放最终页面，而会保留问题、判断和取舍。真实项目信息补齐后，HR 可以快速看见你在每一步中的贡献。",
@@ -354,7 +354,7 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
       ],
     },
     work: {
-      eyebrow: "SELECTED WORK",
+      eyebrow: "SELECTED PROJECTS",
       title: "Three cases that show how I make product decisions",
       intro:
         "These cases will show more than final screens. They preserve the problem, judgment, and trade-offs so a hiring team can see Skylar’s contribution at each step.",
