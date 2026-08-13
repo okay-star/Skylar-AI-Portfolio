@@ -105,6 +105,9 @@ test("keeps bilingual content and interaction contracts in source", async () => 
   assert.match(css, /html\[lang="en"\] \.hero-copy h1/);
   assert.doesNotMatch(css, /\.currently-note[\s\S]*transform: rotate/);
   assert.match(css, /\.currently-note span[\s\S]*font-family: var\(--sans\)/);
+  assert.match(css, /\.contact-rail[\s\S]*width: 108px/);
+  assert.match(css, /\.contact-rail[\s\S]*background: rgba\(251, 251, 253, 0\.68\)/);
+  assert.match(css, /\.section-shell,[\s\S]*width: min\(1100px, calc\(100% - 80px\)\)/);
   assert.doesNotMatch(layout, /codex-preview|Starter Project/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
 });

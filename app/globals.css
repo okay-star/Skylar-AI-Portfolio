@@ -186,11 +186,16 @@ button {
 .contact-rail {
   position: fixed;
   top: 50%;
-  right: 30px;
+  right: clamp(14px, 2vw, 30px);
   z-index: 20;
-  width: 152px;
-  padding: 18px 0;
-  transform: translateY(-44%);
+  width: 108px;
+  padding: 13px 12px 14px;
+  border: 1px solid rgba(156, 169, 184, 0.45);
+  border-radius: 14px;
+  background: rgba(251, 251, 253, 0.68);
+  box-shadow: 0 10px 28px rgba(34, 47, 63, 0.08);
+  backdrop-filter: blur(12px);
+  transform: translateY(-50%);
 }
 
 .contact-rail__eyebrow,
@@ -206,7 +211,7 @@ button {
 }
 
 .contact-rail > p {
-  margin: 8px 0 18px;
+  display: none;
   color: var(--muted);
   font-size: 12px;
   line-height: 1.5;
@@ -251,11 +256,22 @@ a.contact-link:hover {
 .contact-rail .contact-link {
   align-items: flex-start;
   flex-direction: column;
-  gap: 2px;
+  gap: 1px;
+  margin-top: 8px;
+  padding: 0;
+  border-bottom: 0;
+  font-size: 9px;
+}
+
+.contact-rail .contact-link:first-of-type {
+  margin-top: 0;
 }
 
 .contact-rail .contact-link small {
   max-width: 100%;
+  color: #52606e;
+  font-size: 9px;
+  line-height: 1.35;
   overflow-wrap: anywhere;
 }
 
@@ -265,10 +281,10 @@ a.contact-link:hover {
 
 .contact-rail__line {
   display: block;
-  width: 36px;
-  height: 2px;
-  margin-top: 24px;
-  background: var(--warm);
+  width: 18px;
+  height: 1px;
+  margin: 9px 0;
+  background: #9fbde0;
 }
 
 .hero {
@@ -1088,14 +1104,9 @@ html[lang="en"] .hero-copy h1 {
 }
 
 @media (max-width: 1380px) {
-  .contact-rail {
-    right: 16px;
-    width: 126px;
-  }
-
   .section-shell,
   .header-inner {
-    width: min(1100px, calc(100% - 190px));
+    width: min(1100px, calc(100% - 80px));
   }
 }
 
