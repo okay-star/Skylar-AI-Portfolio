@@ -27,7 +27,7 @@ function subscribeToLocale(onStoreChange: () => void) {
 }
 
 function useLocale() {
-  return useSyncExternalStore(subscribeToLocale, getSavedLocale, () => "zh");
+  return useSyncExternalStore<Locale>(subscribeToLocale, getSavedLocale, () => "zh");
 }
 
 function ContactItems({ locale, compact = false }: { locale: Locale; compact?: boolean }) {

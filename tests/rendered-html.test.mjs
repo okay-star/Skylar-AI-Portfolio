@@ -1,30 +1,42 @@
 import assert from "node:assert/strict";
+import { spawn } from "node:child_process";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 
-async function render() {
-  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
-  workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
-  const { default: worker } = await import(workerUrl.href);
+async function renderNextApp(t) {
+  const port = 3200 + Math.floor(Math.random() * 200);
+  const server = spawn("node", ["node_modules/next/dist/bin/next", "start", "-p", String(port)], {
+    cwd: new URL("..", import.meta.url),
+    stdio: ["ignore", "pipe", "pipe"],
+  });
 
-  return worker.fetch(
-    new Request("http://localhost/", {
-      headers: { accept: "text/html" },
-    }),
-    {
-      ASSETS: {
-        fetch: async () => new Response("Not found", { status: 404 }),
-      },
-    },
-    {
-      waitUntil() {},
-      passThroughOnException() {},
-    },
-  );
+  let output = "";
+  server.stdout.on("data", (chunk) => {
+    output += chunk;
+  });
+  server.stderr.on("data", (chunk) => {
+    output += chunk;
+  });
+
+  t.after(() => {
+    if (!server.killed) server.kill();
+  });
+
+  for (let attempt = 0; attempt < 30; attempt += 1) {
+    try {
+      const response = await fetch(`http://127.0.0.1:${port}/`);
+      if (response.ok) return response;
+    } catch {
+      // The Next.js server is still starting.
+    }
+    await new Promise((resolve) => setTimeout(resolve, 100));
+  }
+
+  throw new Error(`Next.js server did not start successfully. ${output}`);
 }
 
-test("server-renders Skylar's Chinese portfolio shell", async () => {
-  const response = await render();
+test("server-renders Skylar's Chinese portfolio shell", async (t) => {
+  const response = await renderNextApp(t);
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
@@ -57,7 +69,7 @@ test("keeps bilingual content and interaction contracts in source", async () => 
     readFile(new URL("../package.json", import.meta.url), "utf8"),
   ]);
 
-  assert.match(page, /useSyncExternalStore\(subscribeToLocale, getSavedLocale/);
+  assert.match(page, /useSyncExternalStore(?:<Locale>)?\(subscribeToLocale, getSavedLocale/);
   assert.match(page, /useState<number \| null>\(0\)/);
   assert.match(page, /localStorage\.setItem\(storageKey, nextLocale\)/);
   assert.match(page, /dispatchEvent\(new Event\(localeChangeEvent\)\)/);
