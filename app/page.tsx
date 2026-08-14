@@ -136,7 +136,7 @@ export default function Home() {
 
           <nav className="desktop-nav" aria-label={locale === "zh" ? "主要导航" : "Primary navigation"}>
             <a href="#work">{copy.nav.work}</a>
-            <a href="#about">{copy.nav.about}</a>
+            <a href="#career">{copy.nav.about}</a>
             <a href="#contact">{copy.nav.contact}</a>
           </nav>
 
@@ -245,7 +245,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section-shell section-block career-section" aria-labelledby="career-title">
+        <section className="section-shell section-block career-section" id="career" aria-labelledby="career-title">
           <div className="career-heading">
             <p className="eyebrow">{copy.career.eyebrow}</p>
             <h2 id="career-title">{copy.career.title}</h2>

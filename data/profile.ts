@@ -126,7 +126,7 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
     skip: "跳到主要内容",
     nav: {
       work: "项目案例",
-      about: "关于我",
+      about: "经历",
       contact: "联系",
     },
     languageLabel: "切换为英文",
@@ -282,7 +282,7 @@ export const profileCopy: Record<Locale, ProfileCopy> = {
     skip: "Skip to main content",
     nav: {
       work: "Work",
-      about: "About",
+      about: "Experience",
       contact: "Contact",
     },
     languageLabel: "Switch to Chinese",
